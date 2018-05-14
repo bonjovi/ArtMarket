@@ -1,0 +1,14 @@
+.slogan {
+	display: inline-block;
+	margin: 150px auto 0 auto;
+
+	&::after {
+		content: "";
+	    width: 100%;
+	    display: block;
+	    height: 12px;
+	    background-color: $violet;
+	    margin-top: -18px;
+	    z-index: -1;
+	}
+}

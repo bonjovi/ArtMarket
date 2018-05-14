@@ -1,0 +1,224 @@
+.banner {
+	width: 100%;
+	height: 700px;
+	opacity: 0.6;
+	position: absolute;
+	top: 0;
+}
+button {
+	background-color: dodgerblue;
+            color: white;
+            padding: 10px 20px;
+            border:0;
+            font-size: 14px;
+            cursor: pointer;
+
+
+}
+
+.ripple-container {
+}
+
+.ripple-container .ripple{
+    background-color: rgba(255,255,255,0.4);
+    animation: ripple 2s forwards cubic-bezier(0, 0, 0.2, 1);
+}
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.container {
+	width: $sitewidth;
+	margin: 0 auto;
+	z-index: 1;
+    position: relative;
+}
+.descriptor {
+	width: 70%;
+	display: inline-block;
+	line-height: 1.5em;	
+}
+.header	{
+	height: 700px;
+	background-color: #000;
+	text-align: center;
+}
+.input {
+	border: 0;
+    background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#D2D2D2, #D2D2D2);
+    background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center calc(100% - 1px);
+    background-color: transparent;
+    transition: background 0s ease-out;
+    float: none;
+    box-shadow: none;
+    border-radius: 0;
+    font-weight: 400;
+    margin: 3px 0 0 0;
+    outline: none;
+}
+
+.input:focus {
+	outline: none;
+    background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#D2D2D2, #D2D2D2);
+    background-size: 100% 2px, 100% 1px;
+    box-shadow: none;
+    transition-duration: 0.3s;
+}
+
+
+.logo {
+	font-size: 32px;
+	font-family: 'Roboto';
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.3s;
+
+	&_violet {
+		color: #9c27b0;
+		transition: color 0.3s;
+	}
+
+	&:hover {
+		text-decoration: none;
+		color: #fff;
+		color: #9c27b0;
+
+		span {
+			color: #fff;
+		}
+	}
+
+	
+}
+.search	{
+	box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+	display: inline-block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    color: rgba(0,0,0, 0.87);
+    background: #fff;
+    padding: 15px;
+}
+.slogan {
+	display: inline-block;
+	margin: 150px auto 0 auto;
+
+	&::after {
+		content: "";
+	    width: 100%;
+	    display: block;
+	    height: 12px;
+	    background-color: $violet;
+	    margin-top: -18px;
+	    z-index: -1;
+	}
+}
+.text {
+	font-family: 'Roboto';
+	font-weight: 400;
+	color: #3c4858;
+	font-size: 14px;
+
+	&_white {
+		color: #fff;
+	}
+
+	&_grey {
+		color: $grey;
+	}
+
+	&_uppercase {
+		text-transform: uppercase;
+	}
+
+	&_small {
+		font-size: 12px;
+	}
+
+	&_middle {
+		font-size: 16px;
+	}
+
+	&_large {
+		font-size: 18px;
+	}
+
+
+
+
+}
+.title {
+	font-family: 'Roboto Slab';
+	color: $basegrey;
+
+	&_white {
+		color: #fff;
+	}
+
+	&_xlarge {
+		font-size: 54px;
+	}
+}
+.topcontacts {
+	text-align: right;
+
+	&__phone {
+		font-family: 'Roboto';
+		font-size: 32px;
+		display: flex;
+		align-items: center;
+		color: #fff;
+
+		&_small {
+			font-size: 16px;
+			margin: 2px 5px 0 0;
+		}
+	}
+
+	&__tomessengers {
+		padding-bottom: 2px;
+		border-bottom: 1px dashed $grey;
+		cursor: pointer;
+		transition: border-color 0.3s;
+
+		&:hover {
+			border-color: transparent;
+		}
+	}
+}
+.topline {
+	position: relative;
+    z-index: 1;
+    padding: 65px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.topmenu {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	&__link {
+		text-decoration: none;
+		margin-right: 35px;
+		transition: color 0.3s;
+
+		&:hover {
+			color: #9c27b0;
+		}
+	}
+}

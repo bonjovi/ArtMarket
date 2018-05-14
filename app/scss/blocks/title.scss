@@ -1,0 +1,12 @@
+.title {
+	font-family: 'Roboto Slab';
+	color: $basegrey;
+
+	&_white {
+		color: #fff;
+	}
+
+	&_xlarge {
+		font-size: 54px;
+	}
+}

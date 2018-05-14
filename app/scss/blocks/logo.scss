@@ -1,0 +1,24 @@
+.logo {
+	font-size: 32px;
+	font-family: 'Roboto';
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.3s;
+
+	&_violet {
+		color: #9c27b0;
+		transition: color 0.3s;
+	}
+
+	&:hover {
+		text-decoration: none;
+		color: #fff;
+		color: #9c27b0;
+
+		span {
+			color: #fff;
+		}
+	}
+
+	
+}

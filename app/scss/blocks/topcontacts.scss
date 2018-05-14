@@ -1,0 +1,27 @@
+.topcontacts {
+	text-align: right;
+
+	&__phone {
+		font-family: 'Roboto';
+		font-size: 32px;
+		display: flex;
+		align-items: center;
+		color: #fff;
+
+		&_small {
+			font-size: 16px;
+			margin: 2px 5px 0 0;
+		}
+	}
+
+	&__tomessengers {
+		padding-bottom: 2px;
+		border-bottom: 1px dashed $grey;
+		cursor: pointer;
+		transition: border-color 0.3s;
+
+		&:hover {
+			border-color: transparent;
+		}
+	}
+}
