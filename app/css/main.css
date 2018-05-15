@@ -423,10 +423,15 @@ textarea:-ms-input-placeholder {
   top: 0; }
 
 .button {
+  font-family: 'Roboto';
   border: none;
   border-radius: 3px;
   position: relative;
-  padding: 12px 30px;
+  padding: 13px 30px 11px 30px;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
@@ -438,9 +443,22 @@ textarea:-ms-input-placeholder {
   box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
   background-color: #9c27b0;
   color: #FFFFFF; }
+  .button:hover {
+    box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2); }
+  .button_wide {
+    width: 200px; }
+  .button_grey {
+    background-color: #999999;
+    box-shadow: 0 2px 2px 0 rgba(153, 153, 153, 0.14), 0 3px 1px -2px rgba(153, 153, 153, 0.2), 0 1px 5px 0 rgba(153, 153, 153, 0.12); }
+    .button_grey:hover {
+      box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2); }
 
-.button:hover {
-  box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2); }
+.button > i {
+  vertical-align: middle;
+  font-size: 16px;
+  top: -2px;
+  position: relative;
+  right: -6px; }
 
 .ripple-container {
   position: absolute;
@@ -565,6 +583,8 @@ textarea:-ms-input-placeholder {
 
 .selectedFilters {
   padding: 40px 0; }
+  .selectedFilters__button {
+    margin-right: 10px; }
 
 .slogan {
   display: inline-block;

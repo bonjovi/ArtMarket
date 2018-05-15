@@ -55,7 +55,7 @@
 			
 			<div class="search">
 				<input type="text" class="input" placeholder="Введите фамилию художника или название картины">
-                <button data-ripple class="button">
+                <button data-ripple class="button button_wide">
                     Искать
                 </button>
 			</div>
@@ -66,11 +66,17 @@
     <main>
     	<div class="container">
 	        <section class="selectedFilters">
-	            <button data-ripple class="button">
-	                Новинки
+	             <button data-ripple class="button button_grey selectedFilters__button">
+	                Сбросить фильтры
+	                <i class="material-icons">delete</i>
 	            </button>
-	            <button data-ripple class="button">
+	            <button data-ripple class="button selectedFilters__button">
+	                Новинки
+	                <i class="material-icons">close</i>
+	            </button>
+	            <button data-ripple class="button selectedFilters__button">
 	                Со скидкой
+	                <i class="material-icons">close</i>
 	            </button>
 	        </section>
         </div>
