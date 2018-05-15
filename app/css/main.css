@@ -391,29 +391,29 @@ template {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  font-family: 'OpenSans Regular';
-  font-size: 1rem;
-  color: #fff; }
+  font-family: 'Roboto';
+  font-size: 0.9rem;
+  color: #b2b2b2; }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  font-family: 'OpenSans Regular';
-  font-size: 1rem;
-  color: #fff; }
+  font-family: 'Roboto';
+  font-size: 0.9rem;
+  color: #b2b2b2; }
 
 /* Firefox 19+ */
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-  font-family: 'OpenSans Regular';
-  font-size: 1rem;
-  color: #fff; }
+  font-family: 'Roboto';
+  font-size: 0.9rem;
+  color: #b2b2b2; }
 
 /* Firefox 18- */
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  font-family: 'OpenSans Regular';
-  font-size: 1rem;
-  color: #fff; }
+  font-family: 'Roboto';
+  font-size: 0.9rem;
+  color: #b2b2b2; }
 
 .banner {
   width: 100%;
@@ -422,13 +422,36 @@ textarea:-ms-input-placeholder {
   position: absolute;
   top: 0; }
 
-button {
-  background-color: dodgerblue;
-  color: white;
-  padding: 10px 20px;
-  border: 0;
-  font-size: 14px;
-  cursor: pointer; }
+.button {
+  border: none;
+  border-radius: 3px;
+  position: relative;
+  padding: 12px 30px;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  outline: none;
+  -webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
+  background-color: #9c27b0;
+  color: #FFFFFF; }
+
+.button:hover {
+  box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2); }
+
+.ripple-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none; }
 
 .ripple-container .ripple {
   background-color: rgba(255, 255, 255, 0.4);
@@ -489,7 +512,13 @@ button {
   border-radius: 0;
   font-weight: 400;
   margin: 3px 0 0 0;
-  outline: none; }
+  outline: none;
+  width: 100%;
+  height: 36px;
+  padding: 2px 0;
+  font-size: 14px;
+  line-height: 1.42857;
+  margin-right: 30px; }
 
 .input:focus {
   outline: none;
@@ -520,14 +549,22 @@ button {
 
 .search {
   box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-  display: inline-block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 55px auto 30px auto;
   position: relative;
   width: 100%;
-  margin-bottom: 30px;
+  max-width: 945px;
   border-radius: 6px;
   color: rgba(0, 0, 0, 0.87);
   background: #fff;
-  padding: 15px; }
+  padding: 15px 25px;
+  box-sizing: border-box; }
+
+.selectedFilters {
+  padding: 40px 0; }
 
 .slogan {
   display: inline-block;
