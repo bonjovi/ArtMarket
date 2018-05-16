@@ -498,6 +498,52 @@ textarea:-ms-input-placeholder {
   100% {
     opacity: 0; } }
 
+.card {
+  width: 385px;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.87);
+  background: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+  .card__pic {
+    height: 60%;
+    position: relative;
+    z-index: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -30px;
+    border-radius: 6px; }
+  .card__img {
+    width: 100%;
+    border-radius: 6px;
+    pointer-events: none;
+    box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
+  .card__coloredbg {
+    -webkit-transform: scale(0.94);
+        -ms-transform: scale(0.94);
+            transform: scale(0.94);
+    top: 12px;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    -webkit-transition: opacity .45s;
+    transition: opacity .45s;
+    opacity: 0; }
+  .card__content {
+    padding: 15px 30px; }
+  .card__title {
+    text-decoration: none; }
+  .card__text {
+    margin-bottom: 5px; }
+    .card__text_painter {
+      margin: 10px 0; }
+
 .container {
   width: 1180px;
   margin: 0 auto;
@@ -609,8 +655,10 @@ textarea:-ms-input-placeholder {
     color: #b2b2b2; }
   .text_uppercase {
     text-transform: uppercase; }
-  .text_small {
+  .text_xsmall {
     font-size: 12px; }
+  .text_small {
+    font-size: 14px; }
   .text_middle {
     font-size: 16px; }
   .text_large {
@@ -618,9 +666,12 @@ textarea:-ms-input-placeholder {
 
 .title {
   font-family: 'Roboto Slab';
-  color: #3c4858; }
+  color: #3c4858;
+  font-weight: 700; }
   .title_white {
     color: #fff; }
+  .title_small {
+    font-size: 18px; }
   .title_xlarge {
     font-size: 54px; }
 
