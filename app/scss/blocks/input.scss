@@ -18,6 +18,14 @@
     font-size: 14px;
     line-height: 1.42857;
     margin-right: 30px;
+
+    @media only screen and (max-width: 640px) {
+        height: 30px;
+    }  
+}
+
+@media only screen and (max-width: 640px) {
+    width: 100%;
 }
 
 .input:focus {
@@ -26,5 +34,6 @@
     background-size: 100% 2px, 100% 1px;
     box-shadow: none;
     transition-duration: 0.3s;
+
 }
 

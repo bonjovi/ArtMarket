@@ -1,12 +1,36 @@
 .card {
-	width: 385px;
+	width: 383px;
 	display: inline-block;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     border-radius: 6px;
     color: rgba(0,0,0, 0.87);
     background: #fff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    margin-right: 15px;
+
+    @media only screen and (min-width: 1200px) {
+		&:nth-child(3n) {
+	    	margin-right: 0px;
+	    	width: 384px;
+	    }
+	}
+
+    @media only screen and (max-width: 1200px) {
+		width: 342px;
+
+		&:nth-child(2n) {
+	    	margin-right: 0px;
+	    	width: 343px;
+	    }
+	}
+
+	@media only screen and (max-width: 768px) {
+	    width: 100%;
+	    margin-right: 0;
+	}
+
+    
 
 	&__pic {
 		height: 60%;
@@ -19,6 +43,7 @@
 	}
 
 	&__img {
+		height: 250px;
     	width: 100%;
 	    border-radius: 6px;
 	    pointer-events: none;
@@ -39,7 +64,7 @@
 	}
 
 	&__content {
-		padding: 15px 30px;
+		padding: 15px 30px 0 30px;
 	}
 
 	&__title {
@@ -52,5 +77,62 @@
 		&_painter {
 			margin: 10px 0;
 		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-top: 1px solid #E8E8E8;
+		padding: 15px 30px;
+		margin-left: -30px;
+		margin-top: 20px;
+		width: 100%;
+		position: relative;
+		cursor: pointer;
+
+		&:hover .card__addtocart {
+			display: flex;
+			opacity: 1;
+		}
+
+		&:hover .card__bottominfo {
+			opacity: 0;
+		}
+	}
+
+	&__location {
+		display: flex;
+		align-items: center;
+		& i {
+			color: $grey;
+			font-size: 18px;
+		}
+	}
+
+	&__addtocart {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-color: $violet;
+		color: #fff;
+		left: 0;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    text-decoration: none;
+	    z-index: 1;
+	    opacity: 0;
+	    transition: opacity 0.3s;
+	    border-radius: 0 0 6px 6px;
+	}
+
+	&__bottominfo {
+		display: flex;
+		justify-content: space-between;
+	    align-items: center;
+		width: 100%;
+		height: 100%;
+		transition: opacity 0.3s;
 	}
 }

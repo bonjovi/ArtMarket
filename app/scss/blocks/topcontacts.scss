@@ -1,12 +1,24 @@
 .topcontacts {
 	text-align: right;
 
+	@media only screen and (max-width: 1200px) {
+		margin-top: 15px;
+	}
+
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
+
 	&__phone {
 		font-family: 'Roboto';
 		font-size: 32px;
 		display: flex;
 		align-items: center;
 		color: #fff;
+
+		@media only screen and (max-width: 1200px) {
+			font-size: 16px;
+		}
 
 		&_small {
 			font-size: 16px;
@@ -19,6 +31,10 @@
 		border-bottom: 1px dashed $grey;
 		cursor: pointer;
 		transition: border-color 0.3s;
+
+		@media only screen and (max-width: 1200px) {
+			font-size: 12px;
+		}
 
 		&:hover {
 			border-color: transparent;

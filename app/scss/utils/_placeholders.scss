@@ -15,3 +15,23 @@ textarea:-moz-placeholder
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder      
 {font-family: 'Roboto'; font-size: 0.9rem; color: $grey;}
+
+@media only screen and (max-width: 640px) {
+    input::-webkit-input-placeholder,
+	textarea::-webkit-input-placeholder
+	{font-family: 'Roboto'; font-size: 0.7rem; color: $grey;}
+
+	input::-moz-placeholder,
+	textarea::-moz-placeholder          
+	{font-family: 'Roboto'; font-size: 0.7rem; color: $grey;}
+
+	/* Firefox 19+ */
+	input:-moz-placeholder,
+	textarea:-moz-placeholder          
+	{font-family: 'Roboto'; font-size: 0.7rem; color: $grey;}
+
+	/* Firefox 18- */
+	input:-ms-input-placeholder,
+	textarea:-ms-input-placeholder      
+	{font-family: 'Roboto'; font-size: 0.7rem; color: $grey;}
+}  

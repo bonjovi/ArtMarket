@@ -1,5 +1,14 @@
 .descriptor {
 	width: 70%;
 	display: inline-block;
-	line-height: 1.5em;	
+	line-height: 1.5em;
+	margin-top: 30px;
+
+	@media only screen and (max-width: 1200px) {
+		width: 100%;
+	}
+
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
 }

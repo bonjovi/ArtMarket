@@ -4,6 +4,11 @@
 	opacity: 0.6;
 	position: absolute;
 	top: 0;
+
+	@media only screen and (max-width: 640px) {
+		height: 320px;
+		background-size: cover;
+	}
 }
 .button {
     font-family: 'Roboto';
@@ -23,12 +28,21 @@
     background-color: #9c27b0;
     color: #FFFFFF;
 
+    @media only screen and (max-width: 640px) {
+        width: 100%;
+        margin-bottom: 10px;
+    }  
+
+
     &:hover {
         box-shadow: 0 14px 26px -12px rgba(156, 39, 176, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);
     }
 
     &_wide {
         width: 200px;
+        @media only screen and (max-width: 640px) {
+            width: 100%;
+        }
     }
 
     &_grey {
@@ -78,14 +92,38 @@
     }
 }
 .card {
-	width: 385px;
+	width: 383px;
 	display: inline-block;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     border-radius: 6px;
     color: rgba(0,0,0, 0.87);
     background: #fff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    margin-right: 15px;
+
+    @media only screen and (min-width: 1200px) {
+		&:nth-child(3n) {
+	    	margin-right: 0px;
+	    	width: 384px;
+	    }
+	}
+
+    @media only screen and (max-width: 1200px) {
+		width: 342px;
+
+		&:nth-child(2n) {
+	    	margin-right: 0px;
+	    	width: 343px;
+	    }
+	}
+
+	@media only screen and (max-width: 768px) {
+	    width: 100%;
+	    margin-right: 0;
+	}
+
+    
 
 	&__pic {
 		height: 60%;
@@ -98,6 +136,7 @@
 	}
 
 	&__img {
+		height: 250px;
     	width: 100%;
 	    border-radius: 6px;
 	    pointer-events: none;
@@ -118,7 +157,7 @@
 	}
 
 	&__content {
-		padding: 15px 30px;
+		padding: 15px 30px 0 30px;
 	}
 
 	&__title {
@@ -132,25 +171,184 @@
 			margin: 10px 0;
 		}
 	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-top: 1px solid #E8E8E8;
+		padding: 15px 30px;
+		margin-left: -30px;
+		margin-top: 20px;
+		width: 100%;
+		position: relative;
+		cursor: pointer;
+
+		&:hover .card__addtocart {
+			display: flex;
+			opacity: 1;
+		}
+
+		&:hover .card__bottominfo {
+			opacity: 0;
+		}
+	}
+
+	&__location {
+		display: flex;
+		align-items: center;
+		& i {
+			color: $grey;
+			font-size: 18px;
+		}
+	}
+
+	&__addtocart {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-color: $violet;
+		color: #fff;
+		left: 0;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    text-decoration: none;
+	    z-index: 1;
+	    opacity: 0;
+	    transition: opacity 0.3s;
+	    border-radius: 0 0 6px 6px;
+	}
+
+	&__bottominfo {
+		display: flex;
+		justify-content: space-between;
+	    align-items: center;
+		width: 100%;
+		height: 100%;
+		transition: opacity 0.3s;
+	}
 }
 .cards {
-	
+	display: flex;
+	flex-wrap: wrap;
 }
 .container {
 	width: $sitewidth;
 	margin: 0 auto;
 	z-index: 1;
     position: relative;
+
+    @media only screen and (max-width: 1200px) {
+		width: 700px;
+	}
+
+	@media only screen and (max-width: 768px) {
+		width: 500px;
+	}
+
+	@media only screen and (max-width: 640px) {
+		width: 300px;
+	}
+}
+.copyright {
+	width: 100%;
+	padding: 35px 0;
+	border-top: 1px solid #5c5c5c;
+	text-align: center;
+	margin-top: 20px;
 }
 .descriptor {
 	width: 70%;
 	display: inline-block;
-	line-height: 1.5em;	
+	line-height: 1.5em;
+	margin-top: 30px;
+
+	@media only screen and (max-width: 1200px) {
+		width: 100%;
+	}
+
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
+}
+.footer {
+	background-color: #323232;
+	padding: 40px 0 0 0;
+
+	& .container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__text {
+		line-height: 1.5em;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		display: inline-block;
+
+		&::after {
+		    content: "";
+		    width: 100%;
+		    display: block;
+		    height: 9px;
+		    background-color: #9c27b0;
+		    margin-top: -8px;
+		    z-index: -1;
+		}
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		line-height: 1.9em;
+	}
+
+	&__section {
+		width: 300px;
+	}
+
+	&__left {
+		width: 60%;
+		display: flex;
+		justify-content: space-between;
+
+		@media only screen and (max-width: 1200px) {
+			width: 100%;
+		}
+	}
+
+	&__right {
+		width: 40%;
+		text-align: right;
+
+		@media only screen and (max-width: 1200px) {
+			width: 100%;
+			text-align: left;
+			margin-top: 60px;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		transition: color 0.5s;
+
+		&:hover {
+			color: #fff;
+		}
+	}
 }
 .header	{
 	height: 700px;
 	background-color: #000;
 	text-align: center;
+
+	@media only screen and (max-width: 640px) {
+		height: 320px;
+	}
 }
 .input {
 	border: 0;
@@ -172,6 +370,14 @@
     font-size: 14px;
     line-height: 1.42857;
     margin-right: 30px;
+
+    @media only screen and (max-width: 640px) {
+        height: 30px;
+    }  
+}
+
+@media only screen and (max-width: 640px) {
+    width: 100%;
 }
 
 .input:focus {
@@ -180,6 +386,7 @@
     background-size: 100% 2px, 100% 1px;
     box-shadow: none;
     transition-duration: 0.3s;
+
 }
 
 
@@ -189,6 +396,10 @@
 	color: #fff;
 	text-decoration: none;
 	transition: color 0.3s;
+
+	@media only screen and (max-width: 768px) {
+		margin: 0 auto;
+	}
 
 	&_violet {
 		color: #9c27b0;
@@ -207,6 +418,14 @@
 
 	
 }
+.promobanner {
+	margin: -15px 0 70px 0;
+    display: block;
+
+    @media only screen and (max-width: 1200px) {
+		display: none;
+	}
+}
 .search	{
 	box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 	display: flex;
@@ -220,9 +439,33 @@
     padding: 15px 25px;
     box-sizing: border-box;
     
+    @media only screen and (max-width: 1200px) {
+        margin-top: 35px;
+    }
+
+     @media only screen and (max-width: 640px) {
+        flex-wrap: wrap;
+        background: transparent;
+        padding: 0;
+    }
+
+    &__inputwrapper {
+        display: none;
+        background-color: #fff;
+        padding: 0 5px 5px 5px;
+        height: 36px;
+        border-radius: 6px;
+        width: 100%;
+        margin-bottom: 10px;
+
+        @media only screen and (max-width: 640px) {
+            display: block;
+        } 
+    }
 }
 .selectedFilters {
 	padding: 40px 0;
+	margin-bottom: 30px;
 
 	&__button {
 		margin-right: 10px;
@@ -232,6 +475,10 @@
 	display: inline-block;
 	margin: 150px auto 0 auto;
 
+	@media only screen and (max-width: 640px) {
+		margin-top: 30px;
+	}
+
 	&::after {
 		content: "";
 	    width: 100%;
@@ -240,7 +487,27 @@
 	    background-color: $violet;
 	    margin-top: -18px;
 	    z-index: -1;
+
+	    @media only screen and (max-width: 640px) {
+			height: 9px;
+			margin-top: -10px;
+		}
 	}
+
+	
+}
+.subscribe {
+	box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+	display: flex;
+    margin: 35px auto 30px auto;
+    position: relative;
+    width: 100%;
+    max-width: 945px;
+    border-radius: 6px;
+    color: rgba(0,0,0, 0.87);
+    background: #fff;
+    padding: 15px 25px;
+    box-sizing: border-box;
 }
 .text {
 	font-family: 'Roboto';
@@ -295,10 +562,30 @@
 
 	&_xlarge {
 		font-size: 54px;
+
+		@media only screen and (max-width: 1200px) {
+			font-size: 50px;
+		}
+
+		@media only screen and (max-width: 768px) {
+			font-size: 30px;
+		}
+
+		@media only screen and (max-width: 640px) {
+			font-size: 20px;
+		}
 	}
 }
 .topcontacts {
 	text-align: right;
+
+	@media only screen and (max-width: 1200px) {
+		margin-top: 15px;
+	}
+
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
 
 	&__phone {
 		font-family: 'Roboto';
@@ -306,6 +593,10 @@
 		display: flex;
 		align-items: center;
 		color: #fff;
+
+		@media only screen and (max-width: 1200px) {
+			font-size: 16px;
+		}
 
 		&_small {
 			font-size: 16px;
@@ -319,6 +610,10 @@
 		cursor: pointer;
 		transition: border-color 0.3s;
 
+		@media only screen and (max-width: 1200px) {
+			font-size: 12px;
+		}
+
 		&:hover {
 			border-color: transparent;
 		}
@@ -331,12 +626,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media only screen and (max-width: 1200px) {
+		flex-wrap: wrap;
+	}
 }
 .topmenu {
 	display: flex;
 	list-style: none;
 	margin: 0;
 	padding: 0;
+
+	@media only screen and (max-width: 768px) {
+		display: none;
+	}
 
 	&__link {
 		text-decoration: none;
@@ -345,6 +648,11 @@
 
 		&:hover {
 			color: #9c27b0;
+		}
+
+		@media only screen and (max-width: 1200px) {
+			margin-right: 0;
+			margin-left: 35px;
 		}
 	}
 }

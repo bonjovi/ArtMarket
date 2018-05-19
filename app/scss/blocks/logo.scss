@@ -5,6 +5,10 @@
 	text-decoration: none;
 	transition: color 0.3s;
 
+	@media only screen and (max-width: 768px) {
+		margin: 0 auto;
+	}
+
 	&_violet {
 		color: #9c27b0;
 		transition: color 0.3s;

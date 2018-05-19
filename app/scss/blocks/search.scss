@@ -11,4 +11,27 @@
     padding: 15px 25px;
     box-sizing: border-box;
     
+    @media only screen and (max-width: 1200px) {
+        margin-top: 35px;
+    }
+
+     @media only screen and (max-width: 640px) {
+        flex-wrap: wrap;
+        background: transparent;
+        padding: 0;
+    }
+
+    &__inputwrapper {
+        display: none;
+        background-color: #fff;
+        padding: 0 5px 5px 5px;
+        height: 36px;
+        border-radius: 6px;
+        width: 100%;
+        margin-bottom: 10px;
+
+        @media only screen and (max-width: 640px) {
+            display: block;
+        } 
+    }
 }
