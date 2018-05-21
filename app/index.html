@@ -12,32 +12,46 @@
 	
 	<link rel="stylesheet" href="css/main.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
-	    <script src="js/ripple.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/ripple.js"></script>
     
 </head>
 <body>
-	<header class="header">
+	<header class="header">	
 		<div class="container">
+			<div class="header__toggler">
+				<i class="material-icons">menu</i>
+			</div>
 			<div class="topline">			
 				<a class="logo" href="#"><span class="logo_violet">Art</span>Market</a>
-				<ul class="topmenu">
-    				<li>
-    					<a href="#" class="topmenu__link text text_white text_uppercase">О проекте</a>
-    				</li>
-					<li>
-						<a href="#" class="topmenu__link text text_white text_uppercase">Аукцион</a>
-					</li>
-					<li>
-						<a href="#" class="topmenu__link text text_white text_uppercase">Художники</a>
-					</li>					
-					<li>
-						<a href="#" class="topmenu__link text text_white text_uppercase">Галереи</a>
-					</li>				
-					<li>
-						<a href="#" class="topmenu__link text text_white text_uppercase">FAQ</a>
-					</li>
-        		</ul><!-- /.topmenu -->
+				<div class="topmenu__wrapper topmenu__wrapper_hidden">
+					<a class="logo" href="#"><span class="logo_violet">Art</span>Market</a>
+					<div class="topcontacts">
+	        			<div class="topcontacts__phone">
+	        				<span class="topcontacts__phone_small">+7 (495) </span>507-64-85
+	        			</div>
+	        			<span class="topcontacts__tomessengers text text_small text_grey">
+	    					Написать в мессенджеры
+	    				</span>
+	        		</div>
+					<ul class="topmenu">
+	    				<li>
+	    					<a href="#" class="topmenu__link text text_white text_uppercase">О проекте</a>
+	    				</li>
+						<li>
+							<a href="#" class="topmenu__link text text_white text_uppercase">Аукцион</a>
+						</li>
+						<li>
+							<a href="#" class="topmenu__link text text_white text_uppercase">Художники</a>
+						</li>					
+						<li>
+							<a href="#" class="topmenu__link text text_white text_uppercase">Галереи</a>
+						</li>				
+						<li>
+							<a href="#" class="topmenu__link text text_white text_uppercase">FAQ</a>
+						</li>
+	        		</ul><!-- /.topmenu -->
+        		</div>
         		<div class="topcontacts">
         			<div class="topcontacts__phone">
         				<span class="topcontacts__phone_small">+7 (495) </span>507-64-85
@@ -65,7 +79,7 @@
 		<div class="banner" style="background-image: url(img/banner1.jpg);"></div>
 	</header>
 
-    <main>
+    <main class="main">
     	<div class="container">
 	        <section class="selectedFilters">
 	             <button data-ripple class="button button_grey selectedFilters__button">
@@ -380,6 +394,9 @@
 
     <footer class="footer">
     	<div class="container">
+    		<div class="footer__toggler">
+				<i class="material-icons">menu</i>
+			</div>
     		<div class="footer__left">
 	    		<div class="footer__section">
 	    			<div class="title title_white footer__title">АртМаркет</div>
