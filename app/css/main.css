@@ -556,7 +556,10 @@ textarea:-ms-input-placeholder {
   @media only screen and (max-width: 768px) {
     .card {
       width: 100%;
-      margin-right: 0; } }
+      margin-right: 0; }
+      .card:nth-child(2n) {
+        width: 100%;
+        margin-right: 0; } }
   .card__pic {
     height: 60%;
     position: relative;
@@ -565,12 +568,18 @@ textarea:-ms-input-placeholder {
     margin-right: 15px;
     margin-top: -30px;
     border-radius: 6px; }
+    @media only screen and (max-width: 768px) {
+      .card__pic {
+        height: auto; } }
   .card__img {
     height: 250px;
     width: 100%;
     border-radius: 6px;
     pointer-events: none;
     box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }
+    @media only screen and (max-width: 768px) {
+      .card__img {
+        height: 100%; } }
   .card__coloredbg {
     -webkit-transform: scale(0.94);
         -ms-transform: scale(0.94);
@@ -696,10 +705,9 @@ textarea:-ms-input-placeholder {
       width: 700px; } }
   @media only screen and (max-width: 768px) {
     .container {
-      width: 500px; } }
-  @media only screen and (max-width: 640px) {
-    .container {
-      width: 300px; } }
+      width: 100%;
+      padding: 0 30px;
+      box-sizing: border-box; } }
 
 .copyright {
   width: 100%;
@@ -751,6 +759,9 @@ textarea:-ms-input-placeholder {
     line-height: 1.9em; }
   .footer__section {
     width: 300px; }
+    @media only screen and (max-width: 640px) {
+      .footer__section {
+        width: 100%; } }
   .footer__left {
     width: 60%;
     display: -webkit-box;
@@ -880,7 +891,6 @@ textarea:-ms-input-placeholder {
       background: transparent;
       padding: 0; } }
   .search__inputwrapper {
-    display: none;
     background-color: #fff;
     padding: 0 5px 5px 5px;
     height: 36px;
@@ -911,6 +921,10 @@ textarea:-ms-input-placeholder {
     background-color: #9c27b0;
     margin-top: -18px;
     z-index: -1; }
+    @media only screen and (max-width: 768px) {
+      .slogan::after {
+        height: 9px;
+        margin-top: -11px; } }
     @media only screen and (max-width: 640px) {
       .slogan::after {
         height: 9px;

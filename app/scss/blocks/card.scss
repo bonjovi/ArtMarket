@@ -28,6 +28,11 @@
 	@media only screen and (max-width: 768px) {
 	    width: 100%;
 	    margin-right: 0;
+
+	    &:nth-child(2n) {
+	    	width: 100%;
+	    	margin-right: 0;
+	    }
 	}
 
     
@@ -40,6 +45,10 @@
 	    margin-right: 15px;
 	    margin-top: -30px;
 	    border-radius: 6px;
+
+	    @media only screen and (max-width: 768px) {
+		    height: auto;
+		}
 	}
 
 	&__img {
@@ -48,6 +57,10 @@
 	    border-radius: 6px;
 	    pointer-events: none;
 	    box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+
+	    @media only screen and (max-width: 768px) {
+		    height: 100%;
+		}
     }
 
 	&__coloredbg {
