@@ -8,6 +8,13 @@
     background: #fff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     margin-right: 15px;
+    box-sizing: border-box;
+
+    &_auction {
+    	border: 1px solid $mint;
+    	box-shadow: 0 2px 2px 0 rgba(0, 188, 212, 0.14), 0 3px 1px -2px rgba(0, 188, 212, 0.2), 0 1px 5px 0 rgba(0, 188, 212, 0.12);
+    	margin-top: -1px;
+    }
 
     @media only screen and (min-width: 1200px) {
 		&:nth-child(3n) {
@@ -138,6 +145,10 @@
 	    opacity: 0;
 	    transition: opacity 0.3s;
 	    border-radius: 0 0 6px 6px;
+
+	    &_mint {
+			background-color: $mint;
+		}
 	}
 
 	&__bottominfo {
@@ -147,5 +158,34 @@
 		width: 100%;
 		height: 100%;
 		transition: opacity 0.3s;
+	}
+
+	&__auctionTitle {
+		display: flex;
+	}
+
+	&__auctionIndicators {
+		display: flex;
+		justify-content: flex-end;
+		flex-grow: 1;
+	}
+
+	.card__auctionSticker {
+		font-size: 10px;
+		color: #fff;
+		text-transform: uppercase;
+		padding: 7px 14px;
+		background-color: $mint;
+		font-family: 'Roboto';
+		border-radius: 30px;
+	}
+
+	&__auctiontime {
+		display: flex;
+		margin-left: 4px;
+	}
+
+	&__timeNumbers {
+		padding: 1px 0 0 2px;
 	}
 }
