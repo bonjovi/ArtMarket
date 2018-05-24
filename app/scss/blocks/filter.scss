@@ -1,0 +1,50 @@
+.filter {
+	width: 0px;
+	height: 0px;
+	background-color: #eae9e9;
+	border-radius: 6px;
+	margin-top: -30px;
+	padding: 0;
+	overflow: hidden;
+	align-self: flex-start;
+	transition: width 0.5s, padding 0.5s;
+
+
+
+	&_uncollapsed {
+		padding: 40px 20px 40px 40px;
+		width: 383px;
+		display: block;
+		height: auto;
+
+		@media only screen and (max-width: 768px) {
+			width: 100%;
+			margin: -20px 0 60px 0!important
+		}
+	}
+
+	&__section {
+		margin-bottom: 40px;
+	}
+
+	&__sectioncontent {
+		overflow: hidden;
+		margin-top: 10px;
+	}
+
+	&__title {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0;
+
+		& i {
+			cursor: pointer;
+			transition: opacity 0.5s;
+
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+}

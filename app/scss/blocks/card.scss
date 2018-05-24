@@ -162,6 +162,8 @@
 
 	&__auctionTitle {
 		display: flex;
+		align-items: flex-start;
+		height: 23px;
 	}
 
 	&__auctionIndicators {

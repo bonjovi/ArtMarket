@@ -12,9 +12,12 @@
 	
 	<link rel="stylesheet" href="css/main.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="js/custom.js"></script>
+	
 	<script src="js/ripple.js"></script>
-    
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/wNumb.js"></script>
+
+    <script src="js/custom.js"></script>
 </head>
 <body>
 	<header class="header">	
@@ -96,158 +99,340 @@
 	            </button>
 	        </section><!-- /.selectedFilters -->
 
-	        <section class="cards">
-	        	<div class="card">
-	        		<div class="card__pic">
-	        			<a href="#">
-	        				<img data-ripple class="card__img" src="/img/card1.jpg" alt="">
-	        			</a>
-	        			<div class="card__coloredbg" style="background-image: url(img/card1.jpg); opacity: 1;"></div>
-	        		</div>
-	        		<div class="card__content">
-	        			<a class="title title_small card__title" href="#">Вечерний морской бриз</a>
-	        			<div class="text text_grey text_small card__text card__text_painter">Сарычев Александр Васильевич</div>
-	        			<div class="text text_grey text_small card__text">Картон, масло</div>
-	        			<div class="text text_grey text_small card__text">35 х 25,5 см</div>
-	        			<div class="text text_grey text_small card__text">1948г.</div>
-	        			<div class="card__bottom">
-	        				<a href="#" class="card__addtocart title title_xsmall title_white">В корзину</a>
-	        				<div class="card__bottominfo">
-	        					<div class="card__price title title_small">90 000 руб.</div>
-	        					<div class="card__location text text_xsmall text_grey"><i class="material-icons">location_on</i>Советский союз</div>
-	        				</div>
-	        			</div>
-	        		</div>
-	        	</div><!-- /.card -->
+	        <section class="selectedFilters selectedFilters_sorting">
+	        	<a href="#" class="text text_small text_grey filterToggler">ПОКАЗАТЬ ФИЛЬТРЫ</a>
+	        </section>
 
-	        	<div class="card">
-	        		<div class="card__pic">
-	        			<a href="#">
-	        				<img data-ripple class="card__img" src="/img/card2.jpg" alt="">
-	        			</a>
-	        			<div class="card__coloredbg" style="background-image: url(img/card2.jpg); opacity: 1;"></div>
-	        		</div>
-	        		<div class="card__content">
-	        			<a class="title title_small card__title" href="#">Летняя деревня</a>
-	        			<div class="text text_grey text_small card__text card__text_painter">Егоров Андрей Афанасьевич</div>
-	        			<div class="text text_grey text_small card__text">Картон, темпера , гуашь</div>
-	        			<div class="text text_grey text_small card__text">35 х 25,5 см</div>
-	        			<div class="text text_grey text_small card__text">1925г.</div>
-	        			<div class="card__bottom">
-	        				<a href="#" class="card__addtocart title title_xsmall title_white">В корзину</a>
-	        				<div class="card__bottominfo">
-	        					<div class="card__price title title_small">65 000 руб.</div>
-	        					<div class="card__location text text_xsmall text_grey"><i class="material-icons">location_on</i>Советский союз</div>
-	        				</div>
-	        			</div>
-	        		</div>
-	        	</div><!-- /.card -->
+	        <div class="cardswrapper">
+		        <div class="filter">
+	        		<div class="filter__section">
+	        			<div class="title title_small filter__title">
+		        			Типы
+		        			<i class="material-icons">remove</i>
+		        		</div>
 
-	        	<div class="card card_auction">
-	        		<div class="card__pic">
-	        			<a href="#">
-	        				<img data-ripple class="card__img" src="/img/card3.jpg" alt="">
-	        			</a>
-	        			<div class="card__coloredbg" style="background-image: url(img/card3.jpg); opacity: 1;"></div>
-	        		</div>
-	        		<div class="card__content">
-	        			<div class="card__auctionTitle">
-	        				<a class="title title_small card__title" href="#">У берега</a>
-	        				<div class="card__auctionIndicators">
-	        					<div class="card__auctionSticker">Аукцион</div>
-	        					<div class="card__auctiontime">
-	        						<i class="material-icons">access_time</i>
-	        						<span class="title title_small card__timeNumbers">23:43:03</span>
-	        					</div>
-	        				</div>
-	        			</div>
-	        			<div class="text text_grey text_small card__text card__text_painter">Сысоев Николай Александрович</div>
-	        			<div class="text text_grey text_small card__text">Холст, масло</div>
-	        			<div class="text text_grey text_small card__text">35 х 25,5 см</div>
-	        			<div class="text text_grey text_small card__text">1948г.</div>
-	        			<div class="card__bottom">
-	        				<a href="#" class="card__addtocart card__addtocart_mint title title_xsmall title_white">Сделать ставку</a>
-	        				<div class="card__bottominfo">
-	        					<div class="card__price title title_small">35 000 руб.</div>
-	        					<div class="card__location text text_xsmall text_grey"><i class="material-icons">location_on</i>Россия</div>
-	        				</div>
-	        			</div>
-	        		</div>
-	        	</div><!-- /.card -->
+		        		<div class="filter__sectioncontent">
+		        			<div class="checkbox">
+								<label>
+									<input type="checkbox" checked=""><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Аукционы</span>
+								</label>
+							</div>
+	
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Новинки</span>
+								</label>
+							</div>
+	
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Со скидкой</span>
+								</label>
+							</div>
+						</div><!--/.filter__sectioncontent-->
+	        		</div><!--/.filter__section-->
+
+	        		<div class="filter__section">
+	        			<div class="title title_small filter__title">
+		        			Стили
+		        			<i class="material-icons">remove</i>
+		        		</div>
+						
+						<div class="filter__sectioncontent">
+			        		<div class="checkbox">
+								<label>
+									<input type="checkbox" checked=""><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Живопись</span>
+								</label>
+							</div>
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Графика</span>
+								</label>
+							</div>
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Импрессионизм</span>
+								</label>
+							</div>
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Абстракционизм</span>
+								</label>
+							</div>
+						</div>
+	        		</div><!--/.filter__section-->
+
+	        		<div class="filter__section">
+	        			<div class="title title_small filter__title">
+		        			Краска
+		        			<i class="material-icons">remove</i>
+		        		</div>
+						
+						<div class="filter__sectioncontent">
+			        		<div class="checkbox">
+								<label>
+									<input type="checkbox" checked=""><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Акрил</span>
+								</label>
+							</div>
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Гуашь</span>
+								</label>
+							</div>
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Масло</span>
+								</label>
+							</div>
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Карандаш</span>
+								</label>
+							</div>
+						</div>
+	        		</div><!--/.filter__section-->
+
+	        		<div class="filter__section">
+	        			<div class="title title_small filter__title">
+		        			Темы
+		        			<i class="material-icons">remove</i>
+		        		</div>
+						
+						<div class="filter__sectioncontent">
+			        		<div class="checkbox">
+								<label>
+									<input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Звери и птицы</span>
+								</label>
+							</div>
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Цветы и растения</span>
+								</label>
+							</div>
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" checked=""><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Абстрактные фигуры</span>
+								</label>
+							</div>
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" checked=""><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Архитектура</span>
+								</label>
+							</div>
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Природа, море, небо</span>
+								</label>
+							</div>
+
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"><span class="checkbox-material"><span class="check"></span></span>
+									<span class="text">Люди и портреты</span>
+								</label>
+							</div>
+						</div>
+	        		</div><!--/.filter__section-->
+
+	        		<div class="filter__section">
+	        			<div class="title title_small filter__title">
+		        			Цена
+		        		</div>
+
+						<div class="filter__sectioncontent">
+			        		<div id="slider" class="slider slider-info noUi-target noUi-ltr noUi-horizontal"></div>
+			        		<div class="sliderNumbers">
+				        		<div id="slider-margin-value-min" class="text text_small"></div>
+				        		<div id="slider-margin-value-max" class="text text_small"></div>
+			        		</div>
+		        		</div>
+		        	</div><!--/.filter__section-->
+
+		        	<button data-ripple class="button button_grey selectedFilters__button">
+		                Сбросить фильтры
+		                <i class="material-icons">delete</i>
+		            </button>
+	        	</div>
+
+		        <section class="cards">
+		        	<div class="card">
+		        		<div class="card__pic">
+		        			<a href="#">
+		        				<img data-ripple class="card__img" src="/img/card1.jpg" alt="">
+		        			</a>
+		        			<div class="card__coloredbg" style="background-image: url(img/card1.jpg); opacity: 1;"></div>
+		        		</div>
+		        		<div class="card__content">
+		        			<a class="title title_small card__title" href="#">Вечерний морской бриз</a>
+		        			<div class="text text_grey text_small card__text card__text_painter">Сарычев Александр Васильевич</div>
+		        			<div class="text text_grey text_small card__text">Картон, масло</div>
+		        			<div class="text text_grey text_small card__text">35 х 25,5 см</div>
+		        			<div class="text text_grey text_small card__text">1948г.</div>
+		        			<div class="card__bottom">
+		        				<a href="#" class="card__addtocart title title_xsmall title_white">В корзину</a>
+		        				<div class="card__bottominfo">
+		        					<div class="card__price title title_small">90 000 руб.</div>
+		        					<div class="card__location text text_xsmall text_grey"><i class="material-icons">location_on</i>Советский союз</div>
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div><!-- /.card -->
+
+		        	<div class="card">
+		        		<div class="card__pic">
+		        			<a href="#">
+		        				<img data-ripple class="card__img" src="/img/card2.jpg" alt="">
+		        			</a>
+		        			<div class="card__coloredbg" style="background-image: url(img/card2.jpg); opacity: 1;"></div>
+		        		</div>
+		        		<div class="card__content">
+		        			<a class="title title_small card__title" href="#">Летняя деревня</a>
+		        			<div class="text text_grey text_small card__text card__text_painter">Егоров Андрей Афанасьевич</div>
+		        			<div class="text text_grey text_small card__text">Картон, темпера , гуашь</div>
+		        			<div class="text text_grey text_small card__text">35 х 25,5 см</div>
+		        			<div class="text text_grey text_small card__text">1925г.</div>
+		        			<div class="card__bottom">
+		        				<a href="#" class="card__addtocart title title_xsmall title_white">В корзину</a>
+		        				<div class="card__bottominfo">
+		        					<div class="card__price title title_small">65 000 руб.</div>
+		        					<div class="card__location text text_xsmall text_grey"><i class="material-icons">location_on</i>Советский союз</div>
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div><!-- /.card -->
+
+		        	<div class="card card_auction">
+		        		<div class="card__pic">
+		        			<a href="#">
+		        				<img data-ripple class="card__img" src="/img/card3.jpg" alt="">
+		        			</a>
+		        			<div class="card__coloredbg" style="background-image: url(img/card3.jpg); opacity: 1;"></div>
+		        		</div>
+		        		<div class="card__content">
+		        			<div class="card__auctionTitle">
+		        				<a class="title title_small card__title" href="#">У берега</a>
+		        				<div class="card__auctionIndicators">
+		        					<div class="card__auctionSticker">Аукцион</div>
+		        					<div class="card__auctiontime">
+		        						<i class="material-icons">access_time</i>
+		        						<span class="title title_small card__timeNumbers">23:43:03</span>
+		        					</div>
+		        				</div>
+		        			</div>
+		        			<div class="text text_grey text_small card__text card__text_painter">Сысоев Николай Александрович</div>
+		        			<div class="text text_grey text_small card__text">Холст, масло</div>
+		        			<div class="text text_grey text_small card__text">35 х 25,5 см</div>
+		        			<div class="text text_grey text_small card__text">1948г.</div>
+		        			<div class="card__bottom">
+		        				<a href="#" class="card__addtocart card__addtocart_mint title title_xsmall title_white">Сделать ставку</a>
+		        				<div class="card__bottominfo">
+		        					<div class="card__price title title_small">35 000 руб.</div>
+		        					<div class="card__location text text_xsmall text_grey"><i class="material-icons">location_on</i>Россия</div>
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div><!-- /.card -->
 
 
 
 
 
-	        	<div class="card">
-	        		<div class="card__pic">
-	        			<a href="#">
-	        				<img data-ripple class="card__img" src="/img/card4.jpg" alt="">
-	        			</a>
-	        			<div class="card__coloredbg" style="background-image: url(img/card4.jpg); opacity: 1;"></div>
-	        		</div>
-	        		<div class="card__content">
-	        			<a class="title title_small card__title" href="#">Утренний рассвет</a>
-	        			<div class="text text_grey text_small card__text card__text_painter">Сарычев Александр Васильевич</div>
-	        			<div class="text text_grey text_small card__text">Картон, масло</div>
-	        			<div class="text text_grey text_small card__text">35 х 25,5 см</div>
-	        			<div class="text text_grey text_small card__text">1948г.</div>
-	        			<div class="card__bottom">
-	        				<a href="#" class="card__addtocart title title_xsmall title_white">В корзину</a>
-	        				<div class="card__bottominfo">
-	        					<div class="card__price title title_small">90 000 руб.</div>
-	        					<div class="card__location text text_xsmall text_grey"><i class="material-icons">location_on</i>Советский союз</div>
-	        				</div>
-	        			</div>
-	        		</div>
-	        	</div><!-- /.card -->
+		        	<div class="card">
+		        		<div class="card__pic">
+		        			<a href="#">
+		        				<img data-ripple class="card__img" src="/img/card4.jpg" alt="">
+		        			</a>
+		        			<div class="card__coloredbg" style="background-image: url(img/card4.jpg); opacity: 1;"></div>
+		        		</div>
+		        		<div class="card__content">
+		        			<a class="title title_small card__title" href="#">Утренний рассвет</a>
+		        			<div class="text text_grey text_small card__text card__text_painter">Сарычев Александр Васильевич</div>
+		        			<div class="text text_grey text_small card__text">Картон, масло</div>
+		        			<div class="text text_grey text_small card__text">35 х 25,5 см</div>
+		        			<div class="text text_grey text_small card__text">1948г.</div>
+		        			<div class="card__bottom">
+		        				<a href="#" class="card__addtocart title title_xsmall title_white">В корзину</a>
+		        				<div class="card__bottominfo">
+		        					<div class="card__price title title_small">90 000 руб.</div>
+		        					<div class="card__location text text_xsmall text_grey"><i class="material-icons">location_on</i>Советский союз</div>
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div><!-- /.card -->
 
-	        	<div class="card">
-	        		<div class="card__pic">
-	        			<a href="#">
-	        				<img data-ripple class="card__img" src="/img/card5.jpg" alt="">
-	        			</a>
-	        			<div class="card__coloredbg" style="background-image: url(img/card5.jpg); opacity: 1;"></div>
-	        		</div>
-	        		<div class="card__content">
-	        			<a class="title title_small card__title" href="#">Морской шторм</a>
-	        			<div class="text text_grey text_small card__text card__text_painter">Егоров Андрей Афанасьевич</div>
-	        			<div class="text text_grey text_small card__text">Картон, темпера , гуашь</div>
-	        			<div class="text text_grey text_small card__text">35 х 25,5 см</div>
-	        			<div class="text text_grey text_small card__text">1925г.</div>
-	        			<div class="card__bottom">
-	        				<a href="#" class="card__addtocart title title_xsmall title_white">В корзину</a>
-	        				<div class="card__bottominfo">
-	        					<div class="card__price title title_small">65 000 руб.</div>
-	        					<div class="card__location text text_xsmall text_grey"><i class="material-icons">location_on</i>Советский союз</div>
-	        				</div>
-	        			</div>
-	        		</div>
-	        	</div><!-- /.card -->
+		        	<div class="card">
+		        		<div class="card__pic">
+		        			<a href="#">
+		        				<img data-ripple class="card__img" src="/img/card5.jpg" alt="">
+		        			</a>
+		        			<div class="card__coloredbg" style="background-image: url(img/card5.jpg); opacity: 1;"></div>
+		        		</div>
+		        		<div class="card__content">
+		        			<a class="title title_small card__title" href="#">Морской шторм</a>
+		        			<div class="text text_grey text_small card__text card__text_painter">Егоров Андрей Афанасьевич</div>
+		        			<div class="text text_grey text_small card__text">Картон, темпера , гуашь</div>
+		        			<div class="text text_grey text_small card__text">35 х 25,5 см</div>
+		        			<div class="text text_grey text_small card__text">1925г.</div>
+		        			<div class="card__bottom">
+		        				<a href="#" class="card__addtocart title title_xsmall title_white">В корзину</a>
+		        				<div class="card__bottominfo">
+		        					<div class="card__price title title_small">65 000 руб.</div>
+		        					<div class="card__location text text_xsmall text_grey"><i class="material-icons">location_on</i>Советский союз</div>
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div><!-- /.card -->
 
-	        	<div class="card">
-	        		<div class="card__pic">
-	        			<a href="#">
-	        				<img data-ripple class="card__img" src="/img/card6.jpg" alt="">
-	        			</a>
-	        			<div class="card__coloredbg" style="background-image: url(img/card6.jpg); opacity: 1;"></div>
-	        		</div>
-	        		<div class="card__content">
-	        			<a class="title title_small card__title" href="#">Кувшинки в пруду</a>
-	        			<div class="text text_grey text_small card__text card__text_painter">Сысоев Николай Александрович</div>
-	        			<div class="text text_grey text_small card__text">Холст, масло</div>
-	        			<div class="text text_grey text_small card__text">35 х 25,5 см</div>
-	        			<div class="text text_grey text_small card__text">1948г.</div>
-	        			<div class="card__bottom">
-	        				<a href="#" class="card__addtocart title title_xsmall title_white">В корзину</a>
-	        				<div class="card__bottominfo">
-	        					<div class="card__price title title_small">35 000 руб.</div>
-	        					<div class="card__location text text_xsmall text_grey"><i class="material-icons">location_on</i>Россия</div>
-	        				</div>
-	        			</div>
-	        		</div>
-	        	</div><!-- /.card -->
-	        </section><!-- /.cards -->
+		        	<div class="card">
+		        		<div class="card__pic">
+		        			<a href="#">
+		        				<img data-ripple class="card__img" src="/img/card6.jpg" alt="">
+		        			</a>
+		        			<div class="card__coloredbg" style="background-image: url(img/card6.jpg); opacity: 1;"></div>
+		        		</div>
+		        		<div class="card__content">
+		        			<a class="title title_small card__title" href="#">Кувшинки в пруду</a>
+		        			<div class="text text_grey text_small card__text card__text_painter">Сысоев Николай Александрович</div>
+		        			<div class="text text_grey text_small card__text">Холст, масло</div>
+		        			<div class="text text_grey text_small card__text">35 х 25,5 см</div>
+		        			<div class="text text_grey text_small card__text">1948г.</div>
+		        			<div class="card__bottom">
+		        				<a href="#" class="card__addtocart title title_xsmall title_white">В корзину</a>
+		        				<div class="card__bottominfo">
+		        					<div class="card__price title title_small">35 000 руб.</div>
+		        					<div class="card__location text text_xsmall text_grey"><i class="material-icons">location_on</i>Россия</div>
+		        				</div>
+		        			</div>
+		        		</div>
+		        	</div><!-- /.card -->
+		        </section><!-- /.cards -->
+	        </div>
 
 	        <a class="promobanner" href="#">
         		<img src="/img/promobanner.jpg" alt="">

@@ -5,4 +5,13 @@
 	&__button {
 		margin-right: 10px;
 	}
+
+	&_sorting {
+		justify-content: space-between;
+		padding-top: 0;
+
+		& a:hover {
+			text-decoration: none;
+		}
+	}
 }
