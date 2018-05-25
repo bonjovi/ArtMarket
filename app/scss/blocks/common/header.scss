@@ -3,8 +3,23 @@
 	background-color: #000;
 	text-align: center;
 
+	
+
 	@media only screen and (max-width: 640px) {
 		height: 320px;
+	}
+
+	&_inner {
+		height: 150px;
+		background-color: #fff;
+
+		@media only screen and (max-width: 640px) {
+			height: 120px;
+		}
+
+		& .header__toggler i {
+			color: $basegrey;
+		}
 	}
 
 	&__toggler {

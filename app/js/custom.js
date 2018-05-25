@@ -94,4 +94,10 @@ $(function() {
 		}, 500);
 	}
 
+	$('.productGallery__thumbnail img').on('click', function() {
+		alert(123);
+		console.log($(this).attr('src'));
+		$('.productGallery__mainpic img').attr('src', $(this + ' img').attr('src'));
+	});
+
 });

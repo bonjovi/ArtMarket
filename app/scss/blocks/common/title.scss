@@ -7,8 +7,20 @@
 		color: #fff;
 	}
 
+	&_basegrey {
+		color: $basegrey;
+	}
+
+	&_centered {
+		text-align: center;
+	}
+
 	&_small {
 		font-size: 18px;
+	}
+
+	&_middle {
+		font-size: 24px;
 	}
 
 	&_xlarge {

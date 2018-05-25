@@ -1,0 +1,16 @@
+.registrationLine {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	padding: 20px 0 20px 0;
+
+	@media only screen and (max-width: 640px) {
+		visibility: hidden;
+	}
+
+	&__link {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

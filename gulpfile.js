@@ -35,7 +35,7 @@ gulp.task('clean', function () {
 
 gulp.task('watch', function() {
     browserSync.init({
-        server: "./app/painters.html"
+        server: "./app"
     });
 
     gulp.watch('app/scss/blocks/**/*.scss', gulp.series('clean', 'blocks', 'sass'));

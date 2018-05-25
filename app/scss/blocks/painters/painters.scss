@@ -1,0 +1,38 @@
+.painters {
+	&__navigation {
+		display: flex;
+		justify-content: center;
+		list-style: none;
+		margin: 40px 0 70px 0;
+		padding: 0;
+
+		@media only screen and (max-width: 768px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__navigationlink {
+		text-decoration: none;
+		transition: color 0.5s;
+		margin-right: 55px;
+
+		@media only screen and (max-width: 768px) {
+			margin-right: 0;
+			display: block;
+    		margin-bottom: 15px;
+		}
+
+		&_active {
+			color: $violet;
+		}
+
+		&:hover {
+			color: $violet;
+		}
+	}
+
+	&__navigationlink:nth-child(2) {
+		margin-right: 0;
+	}
+}
